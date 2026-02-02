@@ -1,10 +1,9 @@
+import { Ionicons } from "@expo/vector-icons";
 import * as ImagePicker from "expo-image-picker";
 import { useContext, useState } from "react";
-import { Alert, Image, TextInput, TouchableOpacity, View } from "react-native";
+import { Alert, Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import uuid from "react-native-uuid";
 import { ProductContext } from "../context/productContext";
-import { Text } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
 
 export default function ProductForm() {
   const { state, dispatch } = useContext(ProductContext);
@@ -50,9 +49,12 @@ export default function ProductForm() {
 
   return (
     <View style={{ padding: 20, backgroundColor: "#F8FAFC" }}>
-      <Text style={{ fontSize: 24, fontWeight: "bold", color: "#1E293B", marginBottom: 25, textAlign: "center" }}>
-        Add New Product
+      <View className="bg-red-500  p-2 mb-6 rounded">
+
+      <Text  style={{ fontSize: 24, fontWeight: "bold", color: "#1E293B", marginBottom: 25, textAlign: "center" }}>
+        Add New Product 
       </Text>
+      </View>
 
       <View style={{ marginBottom: 20 }}>
         <View style={{ flexDirection: "row", alignItems: "center", marginBottom: 8 }}>
